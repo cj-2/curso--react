@@ -178,3 +178,37 @@ um artifício do javasctip chamado operadores de curto circuito.
 Quando um componente é re-renderizado, todos os seus filhos também são.
 
 Documentação dos SyntheticEvent https://pt-br.reactjs.org/docs/events.html
+
+Exemplo mais aprofundado do this.setState, resolvendo o "problema" de sincronização da Virtual DOM.
+
+```jsx
+export class Home extends Component {
+    state = {
+        counter: 0,
+    };
+
+    handleClick = () => {
+        this.setState(
+            (prevState, prevProps) => {
+                console.log("PREV", prevState.counter);
+                return { counter: prevState.counter + 1 };
+            },
+            () => {
+                console.log("POST", this.state.counter); // Aqui sim está atualizado.
+            }
+        );
+
+        // Está "desatualizado" pois o counter ainda não está alterado no Virtual DOM.
+        // console.log(this.state.counter);
+    };
+
+    render() {
+        return (
+            <div className="container">
+                <h1>{this.state.counter}</h1>
+                <button onClick={this.handleClick}>Increment</button>
+            </div>
+        );
+    }
+}
+```
