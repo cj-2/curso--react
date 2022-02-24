@@ -32,3 +32,9 @@ it("should match snapshot", () => {
 ```
 
 Artigos sobre erros comuns de erros: https://kentcdodds.com/blog/common-mistakes-with-react-testing-library
+
+Passando o coverage em todos os testes e desativando o watch
+
+```bash
+npm test -- --watchAll="false" --coverage
+```

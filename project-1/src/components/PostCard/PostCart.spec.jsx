@@ -20,6 +20,7 @@ describe("<PostCard />", () => {
     // criando teste de snapshot
     it("should match snapshot", () => {
         const { container } = render(<PostCard {...props} />); // o primeiro filho é o componente
-        expect(container.firstChild).toMatchSnapshot();
+        const { firstChild } = container;
+        expect(firstChild).toMatchSnapshot();
     });
 });
