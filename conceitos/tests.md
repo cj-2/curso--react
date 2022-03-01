@@ -38,3 +38,9 @@ Passando o coverage em todos os testes e desativando o watch
 ```bash
 npm test -- --watchAll="false" --coverage
 ```
+
+## Mock service Worker
+
+Instalação
+
+     npm install -D msw
