@@ -5,8 +5,8 @@ import "./styles/global-styles.css";
 import { Home } from "./templates/Home";
 
 ReactDOM.render(
-    <React.StrictMode>
-        <Home />
-    </React.StrictMode>,
-    document.getElementById("root") // na div root
+  <React.StrictMode>
+    <Home />
+  </React.StrictMode>,
+  document.getElementById("root") // na div root
 );

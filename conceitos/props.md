@@ -1,3 +1,13 @@
+Diferente do view que possui uma forma padrão de passar os tipos das propriedades, no React é necessário utilizar uma biblioteca
+chama prop-types
+
+Instalando prop-type
+
+    npm i prop-types
+
+Exemplo:
+
+```jsx
 import P from "prop-types";
 import PostCard from "../PostCard";
 import "./styles.css";
@@ -28,8 +38,12 @@ Posts.propTypes = {
   ),
 };
 
-Posts.defaultProps = {
-  posts: [],
-};
+// Posts.defaultProps = {
+//   posts: [],
+// };
 
 export default Posts;
+```
+
+O `.defaultProps` pode ser subtituido apenas passando o valor padrão dentro no `destructuring` da função de entrada,
+ou sejá, a duplicação é desnecessária. 

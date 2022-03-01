@@ -2,6 +2,19 @@ Criando um projeto na mesma pasta.
 
     npx create-react-app .
 
+Criando a configuração do eslint
+
+    npx eslint --init
+
+Instalando o prettier / eslint
+
+    npm i - D prettier eslint-config-prettier eslint-plugin-prettier
+
+Fix com o eslit
+
+    npx eslint src/**/*.js --fix
+
+
 O código HTML dos componentes são exportados de uma função com a letra maiúscula (que remete 
 a um componente), dentro do return escopado por ( ... )
 
