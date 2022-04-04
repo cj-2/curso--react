@@ -77,7 +77,7 @@ const P = () => {
 };
 
 function App() {
-  // exemplo de utilização, porém não é a forma mais indicada.
+  // exemplo de utilização, porém não é a forma mais indicada (com useReduce).
   const [contextState, setContextState] = useState(globalState);
 
   return (
@@ -90,3 +90,18 @@ function App() {
 export default App;
 ```
 
+Criando o contexto isolado.
+
+```jsx
+import { createContext, useState } from 'react';
+import { globalState } from './data';
+
+export const GlobalContext = createContext();
+
+// eslint-disable-next-line
+export const AppContext = ({ children }) => {
+  const [state, setState] = useState(globalState);
+  return <GlobalContext.Provider value={{ state, setState }}>{children}</GlobalContext.Provider>;
+};
+
+```
