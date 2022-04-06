@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_menu_menus",
+  "info": {
+    "displayName": "menu",
+    "icon": "bath",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "menu_link": {
+      "displayName": "menu_link",
+      "type": "component",
+      "repeatable": true,
+      "component": "menu.menu-link",
+      "required": true
+    }
+  }
+}
